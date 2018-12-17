@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.baizhi</groupId>
-    <artifactId>spring-boot-mapper-demo</artifactId>
+    <artifactId>spring-boot-demo2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>spring-boot-mapper-demo</name>
+    <name>spring-boot-demo2</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
