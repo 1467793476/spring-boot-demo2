@@ -18,6 +18,7 @@ public class TestController {
     //es/updateAction
     @RequestMapping("/queryAll")
     public List<Ems> queryAll(HttpSession session) {
+        System.out.println("aaaaaaaaaaaaa");
         List<Ems> list = emsService.queryAll();
         session.setAttribute("emslist", list);
         return list;
