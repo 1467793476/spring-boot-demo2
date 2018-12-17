@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.mapper.EmsMapper">
+    <select id="queryAll" resultType="Ems">
+        select *
+        from ems
+    </select>
+    <select id="queryOne" resultType="Ems">
+        select *
+        from ems
+        where id = #{id}
+    </select>
+    <insert id="regist" parameterType="Ems">
+        <selectKey resultType="int" keyProperty="id" order="BEFORE">
+            select ems_seq.nextval from dual
+        </selectKey>
+        insert into ems values(#{id},#{name},#{salary},#{age})
+    </insert>
+
+    <delete id="delete" parameterType="Integer">
+        delete
+        from ems
+        where id = #{id}
+    </delete>
+    <update id="update" parameterType="Ems">
+        update ems
+        set name=#{name},
+            salary=#{salary},
+            age=#{age}
+        where id = #{id}
+    </update>
+</mapper>
