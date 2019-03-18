@@ -9,7 +9,6 @@ spring:
     username: hr
     password: hr
 mybatis:
-  mapper-locations: classpath:com/baizhi/mapper/*Mapper.xml
   type-aliases-package: com.baizhi.entity
 
 
